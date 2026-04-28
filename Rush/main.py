@@ -18,5 +18,5 @@ def main():
             print("Error")
 
 
-if name == "main":
+if __name__ == "__main__":
     main()
