@@ -7,8 +7,11 @@ def checkmate(board):
     if not rows or any(len(r) != n for r in rows):
         print("Error")
         return
-
-    kings = [(r, c) for r in range(n) for c in range(n) if rows[r][c] == 'K']
+    kings = []
+    for r in range(n): 
+        for c in range(n):
+            if rows[r][c] == 'K':
+                kings.append((r, c))
     if len(kings) != 1:
         print("Error")
         return
